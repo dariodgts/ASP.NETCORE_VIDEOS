@@ -1,0 +1,31 @@
+﻿@page
+@model PRUEBA1.Views.Videos.videosModel
+@{
+}
+<form method="post" enctype="multipart/form-data">
+<h1>
+    prueba de videos
+</h1>
+ 
+<div>
+    <label>
+
+        Elige video
+        <input type="file" name="video" />
+        <br />
+        <button type="submit"> Subir Video</button>
+    </label>
+</div>
+
+
+</form>
+
+
+<h1>@ViewData["MENSAJE"]</h1>
+@if(ViewData["video"] != null)
+{
+    <iframe width="560" height="315" src="~/css/videos/@ViewData["video"]" frameborder=0  allowfullscreen>
+
+
+    </iframe>
+}
